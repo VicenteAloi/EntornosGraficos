@@ -1,44 +1,25 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
 <head>
   <meta charset="UTF-8">
-  <title>Diseño en Tabla</title>
-  <style>
-    table {
-      border-collapse: collapse;
-      width: 100%;
-    }
-    td {
-      border: 1px solid black;
-      padding: 10px;
-      vertical-align: top;
-
-    }
-  </style>
+  <title>Diseño con Frames</title>
 </head>
-<body>
 
-<table style="width:50%; margin: auto;">
+<frameset rows="20%,60%,20%">
+  <!-- Fila 1: Encabezado y Logo -->
+  <frameset cols="66.6%,33.3%">
+    <frame src="ejercicio5/encabezado.html" name="encabezado">
+    <frame src="ejercicio5/logo.html" name="logo">
+  </frameset>
 
-                <tr>
-                    <td colspan="2" style="text-align: start;"><strong>Encabezado</strong></td>
-                    <td style="text-align: end;"><img src="" alt="Logo"></td>
-                </tr>
-                <tr>
-                    <td colspan="1" style="width: 30%;">
-                        <strong>Menu</strong>
-                        <ul>
-                            <li><a href="articulos.html" target="principal">Artículos</a></li>
-                            <li><a href="masInfo.html" target="principal">Más Info</a></li>
-                        </ul></td>
-                    <td colspan="2"><strong>Principal</strong></td>
-                </tr> 
-                <tr >
-                    <td style="border-right: 0px;"></td>
-                    <td style="border-right: 0px; border-left: 0px; text-align: center;">Menu de Navegación</td>
-                    <td style="border-left: 0px;"></td>
-                </tr>
-            </table>
+  <!-- Fila 2: Menu y Principal -->
+  <frameset cols="33.3%,66.6%">
+    <frame src="ejercicio5/menu.html" name="menu">
+    <frame src="ejercicio5/principal.html" name="principal">
+  </frameset>
 
-</body>
+  <!-- Fila 3: Pie -->
+  <frame src="ejercicio5/pie.html" name="pie">
+</frameset>
+
 </html>
